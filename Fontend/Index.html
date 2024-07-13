@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Teamwork is the key to excellence. Build Teams, work better and more efficiently."
+    />
+    <meta
+      property="og:title"
+      content="Teamwork is the key to excellence. Build Teams, work better and more efficiently."
+    />
+    <meta
+      property="og:description"
+      content="Teamwork is the key to excellence. Build Teams, work better and more efficiently."
+    />
+    <meta property="og:type" content="website" />
+    <title>UNITY LINK</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" href="images/TeamsMenuIcon.webp" />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="images/webps/TeamsMenuIcon.webp"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="images/webps/TeamsMenuIcon.webp"
+    />
+  </head>
+  <body class="block--dark">
+    <header class="bg block--skewed-top">
+      <nav>
+        <div class="drop-menu-container" onclick="resetNavigation()">
+          <img
+            class="nav__image"
+            onclick="toggleNavigation()"
+            src="images/webps/TeamsMenuIcon.webp"
+            alt="Navigation Button"
+          />
+          <a href="/user/{user_id}"
+            ><img
+              id="user"
+              class="hide-element"
+              src="images/svgs/user.svg"
+              alt="user"
+          /></a>
+          <a href="/teams/{teams_list}">
+            <img
+              id="teams"
+              class="hide-element"
+              src="images/svgs/teams.svg"
+              alt="teams"
+            />
+          </a>
+          <a href="Dashboard.html"
+            ><img
+              id="dash"
+              class="hide-element"
+              src="images/svgs/dash.svg"
+              alt="dash"
+          /></a>
+          <a href="/settings">
+            <img
+              id="settings"
+              class="hide-element"
+              src="images/svgs/settings.svg"
+              alt="settings"
+            />
+          </a>
+          <div id="bg" class="hide-element"></div>
+        </div>
+      </nav>
+      <section class="header-container block--skewed-bottom">
+        <h1 class="fedex__title">UNITY LINK</h1>
+        <h2 class="sub__title">WELCOME</h2>
+      </section>
+    </header>
+    <main>
+      <div class="container">
+        <div class="button-container">
+          <a onmouseover="moveArrow()" class="button" href="#">
+            Login
+            <p id="firstArrow" class="button__arrow">➤</p>
+          </a>
+        </div>
+        <div class="button-container">
+          <a onmouseover="moveArrow()" class="button" href="Dashboard.html"
+            >View Teams
+            <p id="secondArrow" class="button__arrow">➤</p>
+          </a>
+        </div>
+      </div>
+      <div class="emblem-container">
+        <img
+          class="emblem--large"
+          src="images/webps/TeamsIconLarge.webp"
+          alt=""
+        />
+      </div>
+    </main>
+    <footer class="footer-container">
+      <p class="copy__right">&copy; 2024 UNITY LINK</p>
+      <a href="https://github.com/xRuisu"
+        ><p class="copy__right--sub">xRuisu</p>
+      </a>
+      <div class="git-container">
+        <img
+          class="git__icon"
+          src="/images/svgs/github-white.svg"
+          alt="GitHub"
+        />
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>

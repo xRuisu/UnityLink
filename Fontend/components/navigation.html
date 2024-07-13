@@ -1,0 +1,41 @@
+<nav>
+  <div class="drop-menu-container" onclick="resetNavigation()">
+    <img
+      class="nav__image"
+      onclick="toggleNavigation()"
+      src="images/webps/TeamsMenuIcon.webp"
+      alt="Navigation Button"
+    />
+    <a href="/user/{user_id}"
+      ><img
+        id="user"
+        class="hide-element"
+        src="images/svgs/user.svg"
+        alt="user"
+    /></a>
+    <a href="/teams/{teams_list}">
+      <img
+        id="teams"
+        class="hide-element"
+        src="images/svgs/teams.svg"
+        alt="teams"
+      />
+    </a>
+    <a href="/mydashboard"
+      ><img
+        id="dash"
+        class="hide-element"
+        src="images/svgs/dash.svg"
+        alt="dash"
+    /></a>
+    <a href="/settings">
+      <img
+        id="settings"
+        class="hide-element"
+        src="images/svgs/settings.svg"
+        alt="settings"
+      />
+    </a>
+    <div id="bg" class="hide-element"></div>
+  </div>
+</nav>
