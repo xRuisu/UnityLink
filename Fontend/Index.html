@@ -16,30 +16,24 @@
       content="Teamwork is the key to excellence. Build Teams, work better and more efficiently."
     />
     <meta property="og:type" content="website" />
-    <title>UNITY LINK</title>
+    <title>Unity Link</title>
     <link rel="stylesheet" href="css/styles.css" />
-    <link rel="icon" href="images/TeamsMenuIcon.webp" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      rel="apple-touch-icon"
-      sizes="72x72"
-      href="images/webps/TeamsMenuIcon.webp"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="144x144"
-      href="images/webps/TeamsMenuIcon.webp"
+      href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Gruppo&display=swap"
+      rel="stylesheet"
     />
   </head>
   <body class="block--dark">
     <header class="bg block--skewed-top">
       <nav>
-        <div class="drop-menu-container" onclick="resetNavigation()">
-          <img
-            class="nav__image"
-            onclick="toggleNavigation()"
-            src="images/webps/TeamsMenuIcon.webp"
-            alt="Navigation Button"
-          />
+        <div class="drop-menu-container" onclick="toggleNavigation()">
+          <div class="emblem-container">
+            <p class="emblem-text--small anton-sc-regular">!</p>
+            <div class="circle--small circle-one--small"></div>
+            <div class="circle--small circle-two--small"></div>
+          </div>
           <a href="/user/{user_id}"
             ><img
               id="user"
@@ -74,45 +68,53 @@
         </div>
       </nav>
       <section class="header-container block--skewed-bottom">
-        <h1 class="fedex__title">UNITY LINK</h1>
-        <h2 class="sub__title">WELCOME</h2>
+        <h1 class="unitylink__title anton-sc-regular">Un!ty L!nk</h1>
+        <h2 class="sub__title gruppo-regular">There's No 'I' in Team</h2>
       </section>
     </header>
     <main>
-      <div class="container">
+      <form id="loginPopup" class="login-container">
+        <h3 class="login-text anton-sc-regular">Login</h3>
+        <label class="input-labels gruppo-regular" for="user-email"
+          >Email:</label
+        >
+        <input class="input-container" id="user-email" type="text" />
+        <label class="input-labels gruppo-regular" for="user-password"
+          >Password:</label
+        >
+        <input class="input-container" id="user-password" type="password" />
+        <button class="close-popup button-effect" onclick="closeLoginPopup()">
+          Close
+        </button>
+      </form>
+      <div id="loginContainer" class="container">
         <div class="button-container">
-          <a onmouseover="moveArrow()" class="button" href="#">
+          <a
+            class="button gruppo-regular"
+            onmouseover="moveArrow()"
+            onclick="openLoginPopup()"
+          >
             Login
             <p id="firstArrow" class="button__arrow">➤</p>
           </a>
         </div>
         <div class="button-container">
-          <a onmouseover="moveArrow()" class="button" href="Dashboard.html"
-            >View Teams
+          <a
+            class="button gruppo-regular"
+            href="Dashboard.html"
+            onmouseover="moveArrow()"
+          >
+            View Teams
             <p id="secondArrow" class="button__arrow">➤</p>
           </a>
         </div>
       </div>
-      <div class="emblem-container">
-        <img
-          class="emblem--large"
-          src="images/webps/TeamsIconLarge.webp"
-          alt=""
-        />
-      </div>
     </main>
     <footer class="footer-container">
-      <p class="copy__right">&copy; 2024 UNITY LINK</p>
+      <p class="copy__right anton-sc-regular">&copy; 2024 Unity Link</p>
       <a href="https://github.com/xRuisu"
-        ><p class="copy__right--sub">xRuisu</p>
+        ><p class="copy__right--sub anton-sc-regular">xRuisu</p>
       </a>
-      <div class="git-container">
-        <img
-          class="git__icon"
-          src="/images/svgs/github-white.svg"
-          alt="GitHub"
-        />
-      </div>
     </footer>
     <script src="js/main.js"></script>
   </body>

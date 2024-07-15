@@ -1,8 +1,9 @@
 /* MAIN */
-@import url(/css/normalize.css);
+@import url(/Fontend/css/normalize.css);
 
 root {
   --color-green: #99ffcc;
+  --color-blue: #00bbf3;
 }
 
 html {
@@ -75,16 +76,26 @@ button {
   padding: 0;
 }
 
+/* Anton Font */
+.anton-sc-regular {
+  font-family: "Anton SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.gruppo-regular {
+  font-family: "Gruppo", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 /* BACKGROUND */
 .bg {
   background: linear-gradient(
-    322deg,
-    #00ff89 -60%,
-    rgb(0 1 36) 100%,
-    rgb(32 1 1 / 0%) 22%
+    135deg,
+    rgba(0, 0, 0, 1) -4%,
+    rgba(0, 92, 255, 1) 100%
   );
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 /* BLOCKS */
@@ -108,28 +119,21 @@ button {
   text-align: center;
   height: 215px;
 }
-.fedex__title {
-  background: linear-gradient(to right, #3399cc 49%, #99ffcc 50%);
+.unitylink__title {
+  background: linear-gradient(to right, white 49%, #00bbf3 50%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  margin-bottom: -5px;
+  padding: 4px;
 }
 .sub__title {
   margin: 0;
-  font-size: 2.5rem;
-  color: white;
+  font-size: 20px;
+  color: lightcyan;
+  text-shadow: 2px 4px 1px black;
 }
 
 /* NAV DROP MENU */
-.nav__image {
-  margin: 10px 10px 10px 10px;
-  width: 48px;
-  height: 48px;
-}
-.nav__image:hover {
-  transition: ease-in-out;
-  opacity: 20%;
-  cursor: pointer;
-}
 .drop-menu-container {
   position: relative;
   width: 75px;
@@ -140,7 +144,7 @@ button {
   position: relative;
   width: 35px;
   height: 35px;
-  top: -8rem;
+  top: -22rem;
   left: 16px;
   z-index: -5;
   opacity: 0%;
@@ -166,12 +170,11 @@ button {
   height: 22rem;
   top: 1rem;
   left: 8px;
+  background: rgb(0, 0, 0);
   background: linear-gradient(
-    0deg,
-    rgba(20, 20, 20, 1) 0%,
-    rgba(13, 255, 143, 1) 0%,
-    rgba(13, 255, 143, 1) 50%,
-    rgba(20, 20, 20, 1) 100%
+    180deg,
+    rgba(0, 0, 0, 0.9233894241290266) 5%,
+    rgba(0, 196, 255, 0.9822129535407913) 69%
   );
   opacity: 20%;
 }
@@ -186,9 +189,9 @@ button {
 }
 /* BUTTONS */
 .button-container {
-  display: inline-block;
+  display: block;
   margin-top: 4rem;
-  border: 2px solid #99ffcc;
+  border: 2px solid #00bbf3;
   border-radius: 30px;
   width: 300px;
   height: 50px;
@@ -201,10 +204,10 @@ button {
   font-size: 2rem;
   padding: 1rem;
   width: 150px;
-  color: white;
+  color: lightcyan;
 }
 .button:hover {
-  color: #00ff89;
+  color: #00bbf3;
   cursor: pointer;
 }
 
@@ -217,73 +220,163 @@ button {
   opacity: 0;
 }
 
-/* WEB EMBLEM */
-.emblem-container {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  border: 2px solid transparent;
-}
-.emblem--large {
-  position: sticky;
-  justify-items: center;
-  margin-top: 8rem;
-  width: 200px;
-  height: 180px;
-}
-
 /* FOOTER */
 .footer-container {
   position: relative;
-  padding: 4rem 2rem 0;
-  border-top: 2px solid lightslategray;
+  border-top: 2px solid #00bbf3;
+  top: 59rem;
   border-radius: 100%;
-  top: 14rem;
-  width: 100%;
 }
 .copy__right {
-  text-align: center;
-  font-size: medium;
-  font-weight: 500;
-  color: lightgray;
-}
-.git-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.git__icon {
   position: relative;
-  bottom: 7rem;
-  width: 35px;
-  height: 35px;
-  opacity: 100%;
+  text-align: center;
+  color: white;
+  top: 15px;
+  margin-bottom: 20px;
+  opacity: 35%;
 }
 .copy__right--sub {
-  display: flex;
-  justify-content: center;
   text-align: center;
-  font-size: 15px;
   font-weight: 700;
-  color: lightslategray;
+  color: lightcyan;
 }
 .copy__right--sub:hover {
-  opacity: 20%;
+  text-decoration: underline;
+  transform: scale(1.5);
 }
 
 /* POPUP FORM */
-.form-container {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  background: lightgray;
-  border: 2px solid #00ff89;
-  border-radius: 30px;
-  height: 200px;
-  width: 100%;
-  top: 20rem;
+.login-container {
+  display: none;
+  position: absolute;
+  border: 3px solid lightcyan;
+  border-top: none;
+  border-radius: 10%;
+  box-shadow: 0px 1px 14px deepskyblue;
 }
-.form-title {
+
+.login-text {
+  display: flex;
+  font-size: 36px;
+  justify-content: center;
+  color: lightgreen;
+  text-shadow: 1px 1px 10px #14a0ff;
+  border-bottom: 3px solid lightcyan;
+  border-radius: 100%;
+  margin: -18px 40px 18px 40px;
+}
+
+.input-labels {
+  margin: 10px;
+  font-size: 20px;
+  font-weight: 800;
+  color: mediumspringgreen;
+}
+
+.input-container {
+  border: none;
+  border-bottom-width: medium;
+  border-bottom-style: none;
+  border-bottom-color: currentcolor;
+  background: none;
+  border-bottom: 1px dashed lightskyblue;
+  color: white;
+  text-decoration: wavy;
+  width: 100%;
+}
+
+.input-container:focus {
+  transition: 0.3s ease;
+  outline: 1px solid lightgreen;
+  border-radius: 10%;
+}
+
+.close-popup {
+  position: relative;
+  border: 1px solid lightskyblue;
+  background: none;
+  color: lightcyan;
+  padding: 4px;
+  border-radius: 10%;
+  width: 100px;
+  box-shadow: 0px 0px 9px lightseagreen;
+  font-size: 16px;
+}
+
+/* WEB EMBLEM */
+.circle--small {
+  display: block;
+  position: absolute;
+  border: 2px solid #00bbf3;
+  border-radius: 100%;
+  width: 35px;
+  height: 35px;
+  box-shadow: 0 0 4px white;
+}
+
+.circle-one--small {
+  top: 13px;
+  left: 22px;
+}
+
+.circle-two--small {
+  top: 2rem;
+  left: 1rem;
+}
+
+.emblem-text--small {
+  position: absolute;
+  color: lightcyan;
+  font-size: 15px;
+  font-weight: 700;
+  text-shadow: 1px 1px 5px #00ff89;
+  top: 25px;
+  left: 31px;
+}
+
+.circle--large {
+  display: block;
+  position: absolute;
+  border: 3px solid #00bbf3;
+  border-radius: 100%;
+  width: 200px;
+  height: 200px;
+  box-shadow: 0 0 5px #00ff89;
+}
+
+.circle-one--large {
+  top: 28rem;
+  left: 64rem;
+}
+
+.circle-two--large {
+  top: 25rem;
+  left: 70rem;
+}
+
+.emblem-text--large {
+  position: absolute;
+  color: white;
+  font-size: 8.5rem;
+  font-weight: 400;
+  text-shadow: 1px 1px 5px #00ff89;
+  top: 330px;
+  left: 779px;
+}
+
+.emblem-container {
+  position: relative;
+  margin-bottom: 5px;
+  top: -6rem;
+}
+.button-effect {
+  opacity: 95%;
+}
+
+.button-effect:hover {
+  transition: 0.5s ease-in-out;
+  box-shadow: 0px 0px 12px lightgreen;
+  color: lightcoral;
 }
 
 /* MEDIA QUERIES */
@@ -292,7 +385,7 @@ button {
     height: 110px;
   }
   h1 {
-    font-size: 2rem;
+    font-size: 4rem;
   }
   h2 {
     font-size: 1rem;
@@ -306,14 +399,17 @@ button {
     gap: 0;
   }
   .drop-menu-container {
-    height: 9rem;
+    height: 45px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 7rem;
   }
   .button-container {
     margin-top: 1rem;
     width: 260px;
   }
   .button {
-    font-size: medium;
     text-align: center;
     margin-top: 3px;
     margin-left: 5rem;
@@ -321,21 +417,36 @@ button {
   .button__arrow {
     display: none;
   }
+  .login-container {
+    margin: 2rem;
+  }
+  .close-popup {
+    left: 10rem;
+  }
 }
 @media screen and (min-width: 390px) {
   .header-container {
     height: 154px;
+  }
+  .close-popup {
+    left: 11rem;
   }
 }
 @media screen and (min-width: 431px) {
   .header-container {
     height: 160px;
   }
-  .fedex__title {
+  .unitylink__title {
     font-size: 4rem;
   }
   .sub__title {
     font-size: 3rem;
+  }
+  .login-container {
+    margin: 4rem;
+  }
+  .close-popup {
+    left: 16rem;
   }
 }
 @media screen and (min-width: 560px) {
@@ -343,12 +454,11 @@ button {
     flex-direction: row;
     gap: 2rem;
   }
-  .button {
-    text-align: left;
-    font-size: medium;
+  .login-container {
+    margin-left: 4rem;
   }
-  .button__arrow {
-    display: block;
+  .close-popup {
+    left: 27rem;
   }
 }
 @media screen and (min-width: 1080px) {
@@ -358,10 +468,16 @@ button {
   .block--skewed-top {
     clip-path: polygon(0 100%, 100% 70%, 101% 0, 0 0);
   }
-  .fedex__title {
+  .unitylink__title {
     font-size: 5rem;
   }
   .sub__title {
     font-size: 4rem;
+  }
+  .login-container {
+    margin-left: 38rem;
+  }
+  .close-popup {
+    left: 30rem;
   }
 }

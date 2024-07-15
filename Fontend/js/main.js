@@ -20,20 +20,42 @@ const resetNavigation = () => {
 const moveArrow = () => {
     const a1 = document.getElementById("firstArrow");
     const a2 = document.getElementById("secondArrow");
-    const commonStyles = {
-        left: "16rem",
+    const styleOne = {
+        left: "14rem",
         transition: "0.8s ease-in",
-        color: "#99ffcc",
+        color: "#00bbf3",
         opacity: "100%"
     };
-    Object.assign(a1.style, commonStyles);
-    Object.assign(a2.style, commonStyles);
+    Object.assign(a1.style, styleOne);
+    Object.assign(a2.style, styleOne);
 };
 
-const openForm = () => {
-    document.getElementById("login").style.display = "block";
+// LOGIN 
+
+const openLoginPopup = () => {
+    document.getElementById("loginContainer").style.display = "none";
+    document.getElementById("loginPopup").style.display = "block";
   }
   
-  const closeForm = () => {
-    document.getElementById("login").style.display = "none";
+  const closeLoginPopup = () => {
+    document.getElementById("loginPopup").style.display = "none";
+    document.getElementById("loginContainer").style.display = "flex";
   }
+
+// //   Hamburger Menu Effect
+// const ringEffect = () => {
+//    const ringOne = document.getElementById("ringOne");
+//    const ringTwo = document.getElementById("ringTwo");
+//     const effectOne =  {
+//         opacity: "50%",
+//         transition: "1s ease-in-out",
+//         transform: "rotateY(360deg)"
+//     };
+//     const effectTwo = {
+//         opacity: "50%",
+//         transition: "1s ease-in-out",
+//         transform: "rotateY(-360deg)"
+//     };
+// Object.assign(ringOne, effectOne);
+// Object.assign(ringTwo, effectTwo);
+// }
