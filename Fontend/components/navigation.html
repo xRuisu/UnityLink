@@ -1,11 +1,10 @@
 <nav>
-  <div class="drop-menu-container" onclick="resetNavigation()">
-    <img
-      class="nav__image"
-      onclick="toggleNavigation()"
-      src="images/webps/TeamsMenuIcon.webp"
-      alt="Navigation Button"
-    />
+  <div class="drop-menu-container" onclick="toggleNavigation()">
+    <div class="emblem-container">
+      <p class="emblem-text--small anton-sc-regular">!</p>
+      <div class="circle--small circle-one--small"></div>
+      <div class="circle--small circle-two--small"></div>
+    </div>
     <a href="/user/{user_id}"
       ><img
         id="user"
@@ -21,7 +20,7 @@
         alt="teams"
       />
     </a>
-    <a href="/mydashboard"
+    <a href="Dashboard.html"
       ><img
         id="dash"
         class="hide-element"
