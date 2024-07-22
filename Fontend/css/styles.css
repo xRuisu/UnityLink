@@ -220,31 +220,6 @@ button {
   opacity: 0;
 }
 
-/* FOOTER */
-.footer-container {
-  position: relative;
-  border-top: 2px solid #00bbf3;
-  top: 59rem;
-  border-radius: 100%;
-}
-.copy__right {
-  position: relative;
-  text-align: center;
-  color: white;
-  top: 15px;
-  margin-bottom: 20px;
-  opacity: 35%;
-}
-.copy__right--sub {
-  text-align: center;
-  font-weight: 700;
-  color: lightcyan;
-}
-.copy__right--sub:hover {
-  text-decoration: underline;
-  transform: scale(1.5);
-}
-
 /* POPUP FORM */
 .login-container {
   display: none;
@@ -303,9 +278,33 @@ button {
   font-size: 16px;
 }
 
+/* FOOTER */
+.footer-container {
+  position: relative;
+  border-top: 2px solid #00bbf3;
+  top: 59rem;
+  border-radius: 100%;
+}
+.copy__right {
+  position: relative;
+  text-align: center;
+  color: white;
+  top: 15px;
+  margin-bottom: 20px;
+  opacity: 35%;
+}
+.copy__right--sub {
+  text-align: center;
+  font-weight: 700;
+  color: lightcyan;
+}
+.copy__right--sub:hover {
+  text-decoration: underline;
+  transform: scale(1.5);
+}
+
 /* WEB EMBLEM */
 .circle--small {
-  display: block;
   position: absolute;
   border: 2px solid #00bbf3;
   border-radius: 100%;
@@ -324,51 +323,47 @@ button {
   left: 1rem;
 }
 
-.emblem-text--small {
-  position: absolute;
-  color: lightcyan;
-  font-size: 15px;
-  font-weight: 700;
-  text-shadow: 1px 1px 5px #00ff89;
-  top: 25px;
-  left: 31px;
-}
-
 .circle--large {
-  display: block;
   position: absolute;
-  border: 3px solid #00bbf3;
+  border: 2px solid #00bbf3;
   border-radius: 100%;
   width: 200px;
   height: 200px;
-  box-shadow: 0 0 5px #00ff89;
+  box-shadow: 0 0 7px #00ff89;
 }
 
 .circle-one--large {
-  top: 28rem;
-  left: 64rem;
+  top: -48px;
+  left: -108px;
 }
 
 .circle-two--large {
-  top: 25rem;
-  left: 70rem;
+  top: -10rem;
+  left: -3rem;
 }
 
 .emblem-text--large {
   position: absolute;
-  color: white;
-  font-size: 8.5rem;
-  font-weight: 400;
-  text-shadow: 1px 1px 5px #00ff89;
-  top: 330px;
-  left: 779px;
+  color: lightcyan;
+  font-size: 82px;
+  font-weight: 700;
+  text-shadow: 1px 1px 13px white;
+  top: -26px;
+  left: 24px;
+  opacity: 90%;
 }
 
-.emblem-container {
+.emblem-container--small {
   position: relative;
   margin-bottom: 5px;
   top: -6rem;
 }
+.emblem-container--large {
+  position: relative;
+  margin-left: 15rem;
+  top: 37rem;
+}
+
 .button-effect {
   opacity: 95%;
 }
@@ -382,7 +377,7 @@ button {
 /* MEDIA QUERIES */
 @media screen and (min-width: 200px) {
   .header-container {
-    height: 110px;
+    height: 185px;
   }
   h1 {
     font-size: 4rem;
@@ -426,7 +421,7 @@ button {
 }
 @media screen and (min-width: 390px) {
   .header-container {
-    height: 154px;
+    height: 185px;
   }
   .close-popup {
     left: 11rem;
@@ -434,7 +429,7 @@ button {
 }
 @media screen and (min-width: 431px) {
   .header-container {
-    height: 160px;
+    height: 185px;
   }
   .unitylink__title {
     font-size: 4rem;
@@ -463,7 +458,7 @@ button {
 }
 @media screen and (min-width: 1080px) {
   .header-container {
-    height: 180px;
+    height: 185px;
   }
   .block--skewed-top {
     clip-path: polygon(0 100%, 100% 70%, 101% 0, 0 0);
@@ -479,5 +474,8 @@ button {
   }
   .close-popup {
     left: 30rem;
+  }
+  .emblem-container--large {
+    margin-left: 72rem;
   }
 }
