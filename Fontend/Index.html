@@ -16,8 +16,14 @@
       content="Teamwork is the key to excellence. Build Teams, work better and more efficiently."
     />
     <meta property="og:type" content="website" />
-    <title>Unity Link</title>
+    <title class="anton__sc--regular">Unity Link</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/Fontend/images/webps/favicon.png"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -25,102 +31,133 @@
       rel="stylesheet"
     />
   </head>
-  <body class="block--dark">
+  <body class="block--black">
     <header class="bg block--skewed-top">
       <nav>
         <div class="drop-menu-container" onclick="toggleNavigation()">
           <div class="emblem-container--small">
-            <p class="emblem-text--small anton-sc-regular">!</p>
-            <div class="circle--small circle-one--small"></div>
-            <div class="circle--small circle-two--small"></div>
+            <p class="emblem__text--small anton__sc--regular">!</p>
+            <div class="circle__small circle__one--small"></div>
+            <div class="circle__small circle__two--small"></div>
           </div>
-          <a href="/user/{user_id}"
-            ><img
+          <a href="/user/{user_id}">
+            <img
               id="user"
-              class="hide-element"
+              class="hide__element"
               src="images/svgs/user.svg"
-              alt="user"
-          /></a>
+              alt="User Profile"
+            />
+          </a>
           <a href="/teams/{teams_list}">
             <img
               id="teams"
-              class="hide-element"
+              class="hide__element"
               src="images/svgs/teams.svg"
-              alt="teams"
+              alt="Teams"
             />
           </a>
-          <a href="Dashboard.html"
-            ><img
+          <a href="Dashboard.html">
+            <img
               id="dash"
-              class="hide-element"
+              class="hide__element"
               src="images/svgs/dash.svg"
-              alt="dash"
-          /></a>
+              alt="Dashboard"
+            />
+          </a>
           <a href="/settings">
             <img
               id="settings"
-              class="hide-element"
+              class="hide__element"
               src="images/svgs/settings.svg"
-              alt="settings"
+              alt="Settings"
             />
           </a>
-          <div id="bg" class="hide-element"></div>
+          <div id="bg" class="hide__element"></div>
         </div>
       </nav>
       <section class="header-container block--skewed-bottom">
-        <h1 class="unitylink__title anton-sc-regular">Un!ty L!nk</h1>
-        <h2 class="sub__title gruppo-regular">There's No 'I' in Team</h2>
+        <h1 class="unitylink__title anton__sc--regular">Un!ty L!nk</h1>
+        <h2 class="sub__title gruppo__regular">There's No 'I' in Team</h2>
       </section>
     </header>
     <main>
-      <form id="loginPopup" class="login-container">
-        <h3 class="login-text anton-sc-regular">Login</h3>
-        <label class="input-labels gruppo-regular" for="user-email"
-          >Email:</label
-        >
-        <input class="input-container" id="user-email" type="text" />
-        <label class="input-labels gruppo-regular" for="user-password"
+      <form
+        id="loginForm"
+        class="login-container"
+        action="/login"
+        method="POST"
+      >
+        <h3 class="login__text anton__sc--regular">Log!n</h3>
+        <label class="input__label gruppo__regular" for="uMail">Email:</label>
+        <input
+          class="input__field"
+          id="uMail"
+          name="uMail"
+          type="email"
+          required
+        />
+
+        <label class="input__label gruppo__regular" for="uPassword"
           >Password:</label
         >
-        <input class="input-container" id="user-password" type="password" />
-        <button class="close-popup button-effect" onclick="closeLoginPopup()">
+        <input
+          class="input__field"
+          id="uPassword"
+          name="uPassword"
+          type="password"
+          required
+        />
+        <button
+          class="popup__button popup__button--close anton__sc--regular"
+          type="button"
+          onclick="closeLoginPopup()"
+        >
           Close
         </button>
+        <a
+          class="register__link gruppo__regular"
+          onclick="showRegistrationForm()"
+          href="#"
+          >Create Prof!le?</a
+        >
       </form>
-      <div id="loginContainer" class="container">
+      <div id="homeBtns" class="nav-container">
         <div class="button-container">
           <a
-            class="button gruppo-regular"
+            class="button gruppo__regular"
             onmouseover="moveArrow()"
             onclick="openLoginPopup()"
           >
             Login
-            <p id="firstArrow" class="button__arrow">➤</p>
+            <p id="firstArw" class="button__arrow">➤</p>
           </a>
         </div>
         <div class="button-container">
           <a
-            class="button gruppo-regular"
+            class="button gruppo__regular"
             href="Dashboard.html"
             onmouseover="moveArrow()"
           >
             View Teams
-            <p id="secondArrow" class="button__arrow">➤</p>
+            <p id="secondArw" class="button__arrow">➤</p>
           </a>
         </div>
       </div>
     </main>
-    <div class="emblem-container--large">
-      <p class="emblem-text--large anton-sc-regular">!</p>
-      <div class="circle--large circle-one--large"></div>
-      <div class="circle--large circle-two--large"></div>
+    <div id="emblem" class="emblem-container--large">
+      <p class="emblem__text--large anton__sc--regular">!</p>
+      <div class="circle__large circle__one--large"></div>
+      <div class="circle__large circle__two--large"></div>
     </div>
     <footer class="footer-container">
-      <p class="copy__right gruppo-regular">&copy; 2024 Unity Link</p>
-      <a href="https://github.com/xRuisu"
-        ><p class="copy__right--sub gruppo-regular">xRuisu</p>
+      <p class="copy__right gruppo__regular">
+        &copy; 2024 UnityLink | Un!tyL!nk
+      </p>
+      <a href="https://github.com/xRuisu">
+        <p class="copy__right--sub gruppo__regular">xRuisu</p>
       </a>
     </footer>
     <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
   </body>
 </html>

@@ -1,61 +1,39 @@
+// Utility function to toggle class on elements
+const toggleClassOnElements = (selector, className) => {
+  const elements = document.querySelectorAll(selector);
+  elements.forEach(element => element.classList.toggle(className));
+}
 
-// TOGGLE MENU
+// Utility function to add class on elements
+const addClassOnElements = (selector, className) => {
+  const elements = document.querySelectorAll(selector);
+  elements.forEach(element => element.classList.add(className));
+}
+
+// || Toggle Menu function for hamburger drop down
 const toggleNavigation = () => {
-    const elements = document.querySelectorAll("#user, #teams, #dash, #settings");
-    elements.forEach(element => element.classList.toggle("drop__menu-icon"));
-    
-    const bg = document.getElementById("bg");
-    bg.classList.toggle("drop-menu-bg");
+  toggleClassOnElements("#user, #teams, #dash, #settings", "drop__menu-icon");
+
+  const bg = document.getElementById("bg");
+  bg.classList.toggle("drop-menu-bg");
 }
 
 const resetNavigation = () => {
-    const elements = document.querySelectorAll("#user, #teams, #dash, #settings");
-    elements.forEach(element => element.classList.add("hide-element"));
+  addClassOnElements("#user, #teams, #dash, #settings", "hide-element");
 
-    const bg = document.getElementById("bg");
-    bg.classList.add("hide-element");
+  const bg = document.getElementById("bg");
+  bg.classList.add("hide-element");
 }
 
-// BUTTON ARROWS
+// || Asthetic function for main home buttons
 const moveArrow = () => {
-    const a1 = document.getElementById("firstArrow");
-    const a2 = document.getElementById("secondArrow");
-    const styleOne = {
-        left: "14rem",
-        transition: "0.8s ease-in",
-        color: "#00bbf3",
-        opacity: "100%"
-    };
-    Object.assign(a1.style, styleOne);
-    Object.assign(a2.style, styleOne);
+  const a1 = document.getElementById("firstArw");
+  const a2 = document.getElementById("secondArw");
+  const styleOne = {
+      left: "14rem",
+      transition: "0.8s ease-in",
+      color: "#00bbf3",
+      opacity: "100%"
+  };
+  [a1, a2].forEach(arrow => Object.assign(arrow.style, styleOne));
 };
-
-// LOGIN 
-
-const openLoginPopup = () => {
-    document.getElementById("loginContainer").style.display = "none";
-    document.getElementById("loginPopup").style.display = "block";
-  }
-  
-  const closeLoginPopup = () => {
-    document.getElementById("loginPopup").style.display = "none";
-    document.getElementById("loginContainer").style.display = "flex";
-  }
-
-// //   Hamburger Menu Effect
-// const ringEffect = () => {
-//    const ringOne = document.getElementById("ringOne");
-//    const ringTwo = document.getElementById("ringTwo");
-//     const effectOne =  {
-//         opacity: "50%",
-//         transition: "1s ease-in-out",
-//         transform: "rotateY(360deg)"
-//     };
-//     const effectTwo = {
-//         opacity: "50%",
-//         transition: "1s ease-in-out",
-//         transform: "rotateY(-360deg)"
-//     };
-// Object.assign(ringOne, effectOne);
-// Object.assign(ringTwo, effectTwo);
-// }

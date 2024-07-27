@@ -1,0 +1,33 @@
+<form id="loginForm" class="login-container" action="/login" method="POST">
+  <h3 class="login-text anton-sc-regular">Log!n</h3>
+  <label class="input-labels gruppo-regular" for="uMail">Email:</label>
+  <input
+    class="input-container"
+    id="uMail"
+    name="uMail"
+    type="email"
+    required
+  />
+
+  <label class="input-labels gruppo-regular" for="uPassword">Password:</label>
+  <input
+    class="input-container"
+    id="uPassword"
+    name="uPassword"
+    type="password"
+    required
+  />
+  <button
+    class="popup-button popup-button--close anton-sc-regular"
+    type="button"
+    onclick="closeLoginPopup()"
+  >
+    Close
+  </button>
+  <a
+    class="register-link gruppo-regular"
+    onclick="showRegistrationForm()"
+    href="#"
+    >Create Prof!le?</a
+  >
+</form>
