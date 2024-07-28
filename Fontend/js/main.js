@@ -30,10 +30,17 @@ const moveArrow = () => {
   const a1 = document.getElementById("firstArw");
   const a2 = document.getElementById("secondArw");
   const styleOne = {
-      left: "14rem",
-      transition: "0.8s ease-in",
-      color: "#00bbf3",
-      opacity: "100%"
+    transition: "0.8s ease-in",
+    left: "14rem",
+    color: "#00bbf3",
+    opacity: "100%"
   };
-  [a1, a2].forEach(arrow => Object.assign(arrow.style, styleOne));
+  const styleTwo = {
+    transition: "0.8s ease-in",
+    left: "88px",
+    color: "#00bbf3",
+    opacity: "100%"
+  }
+  Object.assign(a1.style, styleOne);
+  Object.assign(a2.style, styleTwo);
 };

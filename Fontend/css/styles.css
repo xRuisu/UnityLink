@@ -3,7 +3,12 @@
 /* || Global/General  */
 :root {
   --sub-title-color: white;
-  --color-blue: #00bbf3;
+  --color-primary: #00bbf3;
+  --color-secondary: cyan;
+  --color-green: mediumspringgreen;
+  --color-black: #141414;
+  --color-link: aqua;
+  --color-text: white;
 }
 
 html {
@@ -102,7 +107,7 @@ body {
   height: 21.5rem;
 }
 .unitylink__title {
-  background: linear-gradient(to right, white 49%, var(--color-blue) 50%);
+  background: linear-gradient(to right, white 49%, var(--color-primary) 50%);
   -webkit-text-fill-color: transparent;
   background-clip: text;
   margin-bottom: -5px;
@@ -176,31 +181,32 @@ body {
 /* BUTTONS */
 .button-container {
   border-radius: 30px;
-  border: 2px solid #00bbf3;
+  border: 2px solid var(--color-primary);
   margin-top: 4rem;
   width: 300px;
   height: 50px;
-  background: #141414;
+  background: var(--color-black);
 }
 .button {
   display: inline-block;
   font-size: 2rem;
   font-weight: 600;
   text-align: left;
-  color: lightcyan;
+  color: var(--color-text);
   width: 150px;
 }
 .button:hover {
   cursor: pointer;
-  color: #00bbf3;
+  color: var(--color-primary);
 }
 
 /* BUTTON ARROW */
 .button__arrow {
+  display: none;
   position: relative;
-  bottom: 18px;
-  left: 12rem;
-  color: white;
+  top: 2px;
+  left: 1rem;
+  color: var(--color-text);
   opacity: 0;
 }
 
@@ -208,47 +214,47 @@ body {
 .login-container {
   display: none;
   position: absolute;
-  border: 3px solid cyan;
+  border: 3px solid var(--color-secondary);
   border-top: none;
   border-radius: 10%;
   top: 21rem;
-  box-shadow: 0px 1px 14px lightskyblue;
+  box-shadow: 0px 1px 14px var(--color-primary);
 }
 
 .input__field {
   border: none;
   background: none;
-  border-bottom: 1px dashed cyan;
-  color: white;
+  border-bottom: 1px dashed var(--color-secondary);
+  color: var(--color-text);
   text-decoration: wavy;
   width: 100%;
 }
 .input__field:focus {
   transition: 0.3s ease;
-  outline: 1px solid lightgreen;
+  outline: 1px solid var(--color-green);
   border-radius: 10%;
 }
 .login__text {
   display: flex;
   justify-content: center;
-  border-bottom: 3px solid lightcyan;
+  border-bottom: 3px solid var(--color-text);
   border-radius: 100%;
   margin: -18px 40px 18px 40px;
   font-size: 36px;
-  color: lightgreen;
-  text-shadow: 1px 1px 10px #14a0ff;
+  color: var(--color-green);
+  text-shadow: 1px 1px 10px var(--color-primary);
 }
 .input__label {
   margin: 1rem;
   font-size: 20px;
   font-weight: 800;
-  color: mediumspringgreen;
+  color: var(--color-green);
 }
 .register__link {
   display: block;
   margin: 0px 35px 25px;
   font-size: 15px;
-  color: aqua;
+  color: var(--color-link);
   opacity: 50%;
 }
 .register__link:hover {
@@ -281,7 +287,7 @@ body {
 /* FOOTER */
 .footer-container {
   position: relative;
-  border-top: 2px solid #00bbf3;
+  border-top: 2px solid var(--color-primary);
   border-radius: 100%;
   top: 59rem;
 }
@@ -290,22 +296,23 @@ body {
   text-align: center;
   margin-bottom: 20px;
   top: 15px;
-  color: white;
+  color: var(--color-primary);
   opacity: 35%;
 }
 .copy__right--sub {
   text-align: center;
   font-weight: 700;
-  color: lightcyan;
+  color: var(--color-text);
+  opacity: 35%;
 }
 .copy__right--sub:hover {
-  transform: scale(1.5);
   text-decoration: underline;
+  opacity: 100%;
 }
 
 /* || Background Blocks */
 .block--black {
-  background: #141414;
+  background: var(--color-black);
 }
 .block--white {
   background: white;
@@ -333,8 +340,8 @@ body {
   font-size: 9px;
   top: 21px;
   left: 29px;
-  color: lightcyan;
-  text-shadow: 1px 1px 13px cyan;
+  color: var(--color-secondary);
+  text-shadow: 1px 1px 13px var(--color-secondary);
   opacity: 85%;
 }
 .emblem__text--small:hover {
@@ -343,14 +350,14 @@ body {
 }
 .circle__small {
   position: absolute;
-  border: 2px solid #00bbf3;
+  border: 2px solid var(--color-primary);
   border-radius: 100%;
   width: 24px;
   height: 24px;
-  box-shadow: 0 0 4px white;
+  box-shadow: 0 0 4px var(--color-secondary);
 }
 .circle__small:hover {
-  box-shadow: 0 0 72px white;
+  box-shadow: 0 0 72px var(--color-secondary);
 }
 
 .circle__one--small {
@@ -375,18 +382,18 @@ body {
   font-size: 82px;
   top: 95px;
   left: 146px;
-  color: lightcyan;
-  text-shadow: 1px 1px 13px cyan;
+  color: var(--color-text);
+  text-shadow: 1px 1px 13px var(--color-secondary);
   opacity: 85%;
 }
 
 .circle__large {
   position: absolute;
-  border: 2px solid #00bbf3;
+  border: 2px solid var(--color-primary);
   border-radius: 100%;
   width: 200px;
   height: 200px;
-  box-shadow: 0 0 7px #00ff89;
+  box-shadow: 0 0 7px var(--color-secondary);
 }
 
 .circle__one--large {
@@ -504,6 +511,13 @@ body {
   .login-container {
     margin-right: 46rem;
     left: 41rem;
+  }
+  .button {
+    text-align: left;
+    margin: 6px 0px 0 17px;
+  }
+  .button__arrow {
+    display: inline-block;
   }
   .emblem-container--large {
     left: 60rem;
