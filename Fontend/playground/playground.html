@@ -17,8 +17,8 @@
     />
     <meta property="og:type" content="website" />
     <title class="anton__sc--regular">Unity Link</title>
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="/Fontend/playground/playground-styles.css" />
+    <link rel="stylesheet" href="/Fontend/css/normalize.css" />
     <link rel="icon" type="image/x-icon" href="/Fontend/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -40,7 +40,7 @@
             <img
               id="user"
               class="hide__element"
-              src="images/svgs/user.svg"
+              src="/Fontend/images/svgs/user.svg"
               alt="User Profile"
             />
           </a>
@@ -48,7 +48,7 @@
             <img
               id="teams"
               class="hide__element"
-              src="images/svgs/teams.svg"
+              src="/Fontend/images/svgs/teams.svg"
               alt="Teams"
             />
           </a>
@@ -56,7 +56,7 @@
             <img
               id="dash"
               class="hide__element"
-              src="images/svgs/dash.svg"
+              src="/Fontend/images/svgs/dash.svg"
               alt="Dashboard"
             />
           </a>
@@ -64,7 +64,7 @@
             <img
               id="settings"
               class="hide__element"
-              src="images/svgs/settings.svg"
+              src="/Fontend/images/svgs/settings.svg"
               alt="Settings"
             />
           </a>
@@ -77,79 +77,10 @@
           class="unitylink__title anton__sc--regular"
           >Un!ty L!nk</a
         >
-        <h2 class="sub__title gruppo__regular">There's No 'I' in Team</h2>
+        <h2 class="sub__title gruppo__regular">Dashboard</h2>
       </section>
     </header>
-    <main>
-      <form
-        id="loginForm"
-        class="login-container"
-        action="http://127.0.0.1:8080/register"
-        method="POST"
-      >
-        <h3 class="login__text anton__sc--regular">Log!n</h3>
-        <label class="input__label gruppo__regular" for="_email">Email:</label>
-        <input
-          class="input__field"
-          id="_email"
-          name="_email"
-          type="email"
-          required
-        />
-
-        <label class="input__label gruppo__regular" for="_password"
-          >Password:</label
-        >
-        <input
-          class="input__field"
-          id="_password"
-          name="_password"
-          type="password"
-          required
-        />
-        <button
-          class="popup__button popup__button--submit anton__sc--regular"
-          type="submit"
-        >
-          Submit
-        </button>
-        <button
-          class="popup__button popup__button--close anton__sc--regular"
-          type="button"
-          onclick="closeLoginPopup()"
-        >
-          Close
-        </button>
-        <a
-          class="register__link gruppo__regular"
-          onclick="showRegistrationForm()"
-          href="#"
-          >Create Prof!le?</a
-        >
-      </form>
-      <div id="homeBtns" class="nav-container">
-        <div class="button-container">
-          <a
-            class="button gruppo__regular"
-            onmouseover="moveArrow()"
-            onclick="openLoginPopup()"
-          >
-            Login
-            <p id="firstArw" class="button__arrow">➤</p>
-          </a>
-        </div>
-        <div class="button-container">
-          <a
-            class="button gruppo__regular"
-            href="Dashboard.html"
-            onmouseover="moveArrow()"
-          >
-            View Teams
-            <p id="secondArw" class="button__arrow">➤</p>
-          </a>
-        </div>
-      </div>
-    </main>
+    <main>Example Text</main>
     <div id="emblem" class="emblem-container--large">
       <p class="emblem__text--large anton__sc--regular">!</p>
       <div class="circle__large circle__one--large"></div>
@@ -163,7 +94,6 @@
         <p class="copy__right--sub gruppo__regular">xRuisu</p>
       </a>
     </footer>
-    <script src="js/main.js"></script>
-    <script src="js/auth.js"></script>
+    <script src="/Fontend/js/main.js"></script>
   </body>
 </html>
