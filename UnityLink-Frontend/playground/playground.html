@@ -17,9 +17,16 @@
     />
     <meta property="og:type" content="website" />
     <title class="anton__sc--regular">Unity Link</title>
-    <link rel="stylesheet" href="/Fontend/playground/playground-styles.css" />
-    <link rel="stylesheet" href="/Fontend/css/normalize.css" />
-    <link rel="icon" type="image/x-icon" href="/Fontend/favicon.svg" />
+    <link
+      rel="stylesheet"
+      href="/UnityLink-Frontend/playground/playground-styles.css"
+    />
+    <link rel="stylesheet" href="/UnityLink-Frontend/css/normalize.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/UnityLink-Frontend/favicon.svg"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -29,6 +36,26 @@
   </head>
   <body class="bg--white">
     <header class="bg--black block--skewed-top">
+      <div class="menu-container">
+        <img
+          class="menu-item--github"
+          src="/UnityLink-Frontend/images/svgs/github-white.svg"
+          alt="Github"
+        />
+        <img
+          class="menu-item--profile"
+          src="/UnityLink-Frontend/images/svgs/user.svg"
+          alt="User Profile"
+        />
+        <img
+          class="menu-item--search"
+          src="/UnityLink-Frontend/images/search-svgrepo-com.png"
+          alt="search"
+        />
+        <form action="#">
+          <input class="search__input" type="text" />
+        </form>
+      </div>
       <nav>
         <div class="drop-menu-container" onclick="toggleNavigation()">
           <div class="emblem-container--small">
@@ -40,7 +67,7 @@
             <img
               id="user"
               class="hide__element"
-              src="/Fontend/images/svgs/user.svg"
+              src="/UnityLink-Frontend/images/svgs/user.svg"
               alt="User Profile"
             />
           </a>
@@ -48,7 +75,7 @@
             <img
               id="teams"
               class="hide__element"
-              src="/Fontend/images/svgs/teams.svg"
+              src="/UnityLink-Frontend/images/svgs/teams.svg"
               alt="Teams"
             />
           </a>
@@ -56,7 +83,7 @@
             <img
               id="dash"
               class="hide__element"
-              src="/Fontend/images/svgs/dash.svg"
+              src="/UnityLink-Frontend/images/svgs/dash.svg"
               alt="Dashboard"
             />
           </a>
@@ -64,7 +91,7 @@
             <img
               id="settings"
               class="hide__element"
-              src="/Fontend/images/svgs/settings.svg"
+              src="/UnityLink-Frontend/images/svgs/settings.svg"
               alt="Settings"
             />
           </a>
@@ -73,7 +100,7 @@
       </nav>
       <section class="header-container">
         <a
-          href="/Fontend/Index.html"
+          href="/UnityLink-Frontend/Index.html"
           class="unitylink__title anton__sc--regular"
           >Un!ty L!nk</a
         >
@@ -94,6 +121,6 @@
         <p class="copy__right--sub gruppo__regular">xRuisu</p>
       </a>
     </footer>
-    <script src="/Fontend/js/main.js"></script>
+    <script src="/UnityLink-Frontend/js/main.js"></script>
   </body>
 </html>

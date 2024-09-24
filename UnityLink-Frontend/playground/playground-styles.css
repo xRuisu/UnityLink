@@ -418,6 +418,51 @@ body {
   left: 9rem;
 }
 
+.menu-container {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  left: 125rem;
+  top: 20px;
+  gap: 10px;
+}
+
+.search__input {
+  position: relative;
+  padding-left: 21px;
+  border: none;
+  background: transparent;
+  height: 25px;
+  width: 20px;
+  color: white;
+  font-size: 12px;
+  top: -7px;
+  left: -30px;
+  opacity: 70%;
+}
+
+.search__input:focus {
+  transition: 1s ease-in-out;
+  outline: 1px solid var(--color-primary);
+  width: 200px;
+}
+
+.menu-item--search {
+  width: 20px;
+  height: 20px;
+}
+
+.menu-item--github {
+  width: 20px;
+  height: 20px;
+  padding: 2px;
+}
+.menu-item--profile {
+  width: 20px;
+  height: 20px;
+  padding: 2px;
+}
+
 /* || Media Queries */
 @media screen and (min-width: 200px) {
   .header-container {
