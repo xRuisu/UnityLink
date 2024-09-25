@@ -218,7 +218,7 @@ body {
   border: 3px solid var(--color-secondary);
   border-top: none;
   border-radius: 10%;
-  top: 21rem;
+  top: 24rem;
   background: var(--color-black);
   box-shadow: 0px 1px 14px var(--color-primary);
 }
@@ -451,7 +451,6 @@ body {
     display: none;
   }
   .login-container {
-    margin: 2rem;
   }
   .emblem-container--large {
     left: 35px;
@@ -475,9 +474,6 @@ body {
   .sub__title {
     font-size: 3rem;
   }
-  .login-container {
-    margin: 4rem;
-  }
   .emblem-container--large {
     left: 115px;
   }
@@ -487,18 +483,14 @@ body {
     flex-direction: row;
     gap: 2rem;
   }
-  .login-container {
-    margin-right: 10rem;
-    left: 4rem;
-  }
   .emblem-container--large {
     left: 23rem;
   }
 }
 @media screen and (min-width: 1024px) {
   .login-container {
-    margin-right: 17rem;
-    left: 14rem;
+    left: 24rem;
+    width: 50%;
   }
   .register-link {
     top: 16.5rem;
@@ -520,10 +512,6 @@ body {
   .sub__title {
     font-size: 4rem;
   }
-  .login-container {
-    margin-right: 46rem;
-    left: 41rem;
-  }
   .button {
     text-align: left;
     margin: 6px 0px 0 17px;
@@ -532,6 +520,20 @@ body {
     display: inline-block;
   }
   .emblem-container--large {
-    left: 60rem;
+    left: 77rem;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .header-container {
+    height: 225px;
+    margin-top: 1rem;
+  }
+  .login-container {
+    left: 46rem;
+    width: 50%
+  }
+  .unitylink__title {
+    font-size: 7rem;
   }
 }
