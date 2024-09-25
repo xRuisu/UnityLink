@@ -429,15 +429,15 @@ body {
 
 .search__input {
   position: relative;
-  padding-left: 21px;
+  padding-left: 35px;
   border: none;
   background: transparent;
-  height: 25px;
-  width: 20px;
+  height: 30px;
+  width: 25px;
   color: white;
   font-size: 12px;
-  top: -7px;
-  left: -30px;
+  top: -1px;
+  left: -40px;
   opacity: 70%;
 }
 
@@ -448,18 +448,18 @@ body {
 }
 
 .menu-item--search {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
 }
 
 .menu-item--github {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   padding: 2px;
 }
 .menu-item--profile {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   padding: 2px;
 }
 
