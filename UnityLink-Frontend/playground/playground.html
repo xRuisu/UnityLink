@@ -19,9 +19,9 @@
     <title class="anton__sc--regular">Unity Link</title>
     <link
       rel="stylesheet"
-      href="/UnityLink/UnityLink-Frontend/playground/playground-styles.css"
+      href="/UnityLink-Frontend/playground/playground-styles.css"
     />
-    <link rel="stylesheet" href="/UnityLink/UnityLink-Frontend/css/normalize.css" />
+    <link rel="stylesheet" href="/UnityLink-Frontend/css/normalize.css" />
     <link
       rel="icon"
       type="image/x-icon"
@@ -39,25 +39,30 @@
       <div class="menu-container">
         <a href="https://github.com/xRuisu">
           <img
-          class="menu-item--github"
-          src="/UnityLink/UnityLink-Frontend/images/svgs/github-white.svg"
-          alt="Github"
+            class="menu-item--github"
+            src="/UnityLink-Frontend/images/svgs/github-white.svg"
+            alt="Github"
         /></a>
-        
+
         <a href="/user/{user_id}">
           <img
-          class="menu-item--profile"
-          src="/UnityLink/UnityLink-Frontend/images/svgs/user.svg"
-          alt="User Profile"
+            class="menu-item--profile"
+            src="/UnityLink-Frontend/images/svgs/user.svg"
+            alt="User Profile"
         /></a>
-        
+
         <img
           class="menu-item--search"
-          src="/UnityLink/UnityLink-Frontend/images/search-svgrepo-com.png"
+          src="/UnityLink-Frontend/images/search-svgrepo-com.png"
           alt="search"
         />
-        <form action="#">
-          <input class="search__input" type="text" />
+        <form id="searchForm" action="/search" method="GET">
+          <input
+            id="searchInput"
+            class="search__input"
+            type="text"
+            name="query"
+          />
         </form>
       </div>
       <nav>
@@ -71,7 +76,7 @@
             <img
               id="user"
               class="hide__element"
-              src="/UnityLink/UnityLink-Frontend/images/svgs/user.svg"
+              src="/UnityLink-Frontend/images/svgs/user.svg"
               alt="User Profile"
             />
           </a>
@@ -79,7 +84,7 @@
             <img
               id="teams"
               class="hide__element"
-              src="/UnityLink/UnityLink-Frontend/images/svgs/teams.svg"
+              src="/UnityLink-Frontend/images/svgs/teams.svg"
               alt="Teams"
             />
           </a>
@@ -87,7 +92,7 @@
             <img
               id="dash"
               class="hide__element"
-              src="/UnityLink/UnityLink-Frontend/images/svgs/dash.svg"
+              src="/UnityLink-Frontend/images/svgs/dash.svg"
               alt="Dashboard"
             />
           </a>
@@ -95,7 +100,7 @@
             <img
               id="settings"
               class="hide__element"
-              src="/UnityLink/UnityLink-Frontend/images/svgs/settings.svg"
+              src="/UnityLink-Frontend/images/svgs/settings.svg"
               alt="Settings"
             />
           </a>
@@ -104,7 +109,7 @@
       </nav>
       <section class="header-container">
         <a
-          href="/UnityLink/UnityLink-Frontend/Index.html"
+          href="/UnityLink-Frontend/Index.html"
           class="unitylink__title anton__sc--regular"
           >Un!ty L!nk</a
         >
@@ -112,11 +117,6 @@
       </section>
     </header>
     <main>Example Text</main>
-    <div id="emblem" class="emblem-container--large">
-      <p class="emblem__text--large anton__sc--regular">!</p>
-      <div class="circle__large circle__one--large"></div>
-      <div class="circle__large circle__two--large"></div>
-    </div>
     <footer class="footer-container">
       <p class="copy__right gruppo__regular">
         &copy; 2024 UnityLink | Un!tyL!nk
@@ -125,6 +125,7 @@
         <p class="copy__right--sub gruppo__regular">xRuisu</p>
       </a>
     </footer>
-    <script src="/UnityLink/UnityLink-Frontend/js/main.js"></script>
+    <script src="/UnityLink-Frontend/js/main.js"></script>
+    <script src="/UnityLink-Frontend/js/search.js"></script>
   </body>
 </html>

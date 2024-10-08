@@ -1,4 +1,4 @@
-@import url(/UnityLink/UnityLink-Frontend/css/normalize.css);
+@import url(/UnityLink-Frontend/css/normalize.css);
 
 /* || Global/General  */
 :root {
@@ -579,5 +579,11 @@ body {
   }
   .emblem-container--large {
     left: 60rem;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .menu-container {
+    left: 124rem;
   }
 }

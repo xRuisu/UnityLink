@@ -512,6 +512,10 @@ body {
   .sub__title {
     font-size: 4rem;
   }
+  .login-container {
+    margin-right: 46rem;
+    left: 41rem;
+  }
   .button {
     text-align: left;
     margin: 6px 0px 0 17px;
@@ -520,10 +524,9 @@ body {
     display: inline-block;
   }
   .emblem-container--large {
-    left: 77rem;
+    left: 60rem;
   }
 }
-
 @media screen and (min-width: 1920px) {
   .header-container {
     height: 225px;
@@ -531,7 +534,7 @@ body {
   }
   .login-container {
     left: 46rem;
-    width: 50%
+    width: 50%;
   }
   .unitylink__title {
     font-size: 7rem;

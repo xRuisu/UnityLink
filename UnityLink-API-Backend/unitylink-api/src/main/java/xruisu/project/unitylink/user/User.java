@@ -8,83 +8,79 @@ import jakarta.persistence.Table;
 @Table(name="users")
 
 public class User {
-	
+
 	@Id
-	private String unique_id;
-	
-	private String sessionID;
-	
-	private String first_name;
+	private String userId;
+	private String sessionId;
 
-	private String last_name;
-	
+	private String firstName;
+	private String lastName;
+
 	private String email;
-	
 	private String password;
-	
-	private String confirmPassword;
-		
+
 	private String role;
-
+	private String manager;
+	
 	private String location;
-	
-	private WebPerms access_type;
-	
+	private String accessType;
 
-	 String getUnqiueID() {
-		return unique_id;
+	//private String confirmPassword;
+
+	public String getUnqiueID() {
+		return userId;
 	}
 
-	public void setUnqiueID(String uid) {
-		this.unique_id = uid;
+	public void setUniqueID(String userId) {
+		this.userId = userId;
 	}
 
 	public String getFirstName() {
-		return first_name;
+		return firstName;
 	}
 
 	public void setFirstName(String firstName) {
-		this.first_name = firstName;
+		this.firstName = firstName;
 	}
 
 	public String getLastName() {
-		return last_name;
+		return lastName;
 	}
 
 	public void setLastName(String lastName) {
-		this.last_name = lastName;
+		this.lastName = lastName;
 	}
-	
+
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
+
 	public String getEmail() {
 		return email;
 	}
-	
+
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
+
 	public String getPassword() {
 		return password;
 	}
-	
-	public void setConfirmPassword(String confirmPassword) {
-		this.confirmPassword = confirmPassword;
-	}
-	
-	public String getConfirmPassword() {
-		return confirmPassword;
-	}
 
-	public String getEmpPosition() {
+	//	public void setConfirmPassword(String confirmPassword) {
+	//		this.confirmPassword = confirmPassword;
+	//	}
+	//	
+	//	public String getConfirmPassword() {
+	//		return confirmPassword;
+	//	}
+
+	public String getRole() {
 		return role;
 	}
 
-	public void setEmpPosition(String empPosition) {
-		this.role = empPosition;
+	public void setRole(String role) {
+		this.role = role;
 	}
 
 	public String getLocation() {
@@ -95,19 +91,27 @@ public class User {
 		this.location = location;
 	}
 
-	public WebPerms getAccessType() {
-		return access_type;
+	public String getAccessType() {
+		return accessType;
 	}
 
-	public void setAccessType(WebPerms string) {
-		this.access_type = string;
+	public void setAccessType(String accessType) {
+		this.accessType = accessType;
 	}
 
 	public String getSessionID() {
-		return sessionID;
+		return sessionId;
 	}
 
-	public void setSessionID(String sessionID) {
-		this.sessionID = sessionID;
+	public void setSessionID(String sessionId) {
+		this.sessionId = sessionId;
+	}
+	
+	public String getManager() {
+		return manager;
+	}
+
+	public void setManager(String manager) {
+		this.manager = manager;
 	}
 }
