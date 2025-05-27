@@ -4,7 +4,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import xruisu.project.unitylink.teams.Team;
@@ -18,7 +17,6 @@ public class SearchService {
     private final TeamRepository teamRepository;
     private final UserRepository userRepository;
 
-    @Autowired
     public SearchService(TeamRepository teamRepository, UserRepository userRepository) {
         this.teamRepository = teamRepository;
         this.userRepository = userRepository;
@@ -26,13 +24,13 @@ public class SearchService {
 
     // Search both teams and users, return them separately in a Map
     public Map<String, Object> search(String query) {
-        Optional<Team> teams = teamRepository.findById(query);  // Search for teams
-        Optional<User> users = userRepository.findById(query);  // Search for users
+        Optional<Team> teams = teamRepository.findById(query); // Search for teams
+        Optional<User> users = userRepository.findById(query); // Search for users
 
         Map<String, Object> searchResults = new HashMap<>();
-        searchResults.put("teams", teams);  // Put list of teams into the map
-        searchResults.put("users", users);  // Put list of users into the map
+        searchResults.put("teams", teams); // Put list of teams into the map
+        searchResults.put("users", users); // Put list of users into the map
 
-        return searchResults;  // Return the map containing both
+        return searchResults; // Return the map containing both
     }
 }

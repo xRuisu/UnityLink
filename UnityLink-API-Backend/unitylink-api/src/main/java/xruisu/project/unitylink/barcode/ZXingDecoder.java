@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 import com.google.zxing.MultiFormatReader;
 import com.google.zxing.NotFoundException;
 
-public abstract class ZXingDecoder extends ZXingConverter implements ZXingable {
+public abstract class ZXingDecoder extends ZXingConverter {
 
 	private static final Logger logger = LoggerFactory.getLogger(ZXingDecoder.class);
 

@@ -15,15 +15,14 @@ public class ZXing extends ZXingDecoder {
 	public void initialize() {
 		logger.info(":: @ZXing :: -> Initializing...");
 
-		//Set path to file
-		setFilePath("C:\\Users\\ruisu\\Documents\\Desktop PC\\Downloads\\CodeReader\\fid.jpg");
+		// Set path to file
+		setFilePath("C:\\Users\\ruisu\\Documents\\Desktop PC\\Downloads\\CodeReader\\decodeTest.jpg");
 
-		//Convert the image to grayscale
+		// Convert the image to grayscale
 		logger.info(":: @ZXing :: -> Converting...");
 		convertImage();
 
-
-		//Decode the image file
+		// Decode the image file
 		logger.info(":: @ZXing :: -> Decoding...");
 		decodeBarcode();
 		logger.info(":: @ZXing :: -> Complete.");
